@@ -1,0 +1,43 @@
+{
+  "name": "load-script2",
+  "description": "Dynamic script loading for modern browsers",
+  "version": "0.0.0",
+  "author": {
+    "name": "Feross Aboukhadijeh",
+    "email": "feross@feross.org",
+    "url": "http://feross.org/"
+  },
+  "bugs": {
+    "url": "https://github.com/feross/load-script2/issues"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "standard": "*",
+    "tape": "^4.0.0",
+    "zuul": "^3.11.1"
+  },
+  "homepage": "https://github.com/feross/load-script2",
+  "keywords": [
+    "load",
+    "script",
+    "load-script",
+    "load-script2",
+    "load script",
+    "script loading",
+    "script loader",
+    "loader",
+    "loading"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/feross/load-script2.git"
+  },
+  "scripts": {
+    "test": "standard && npm run test-node && npm run test-browser",
+    "test-browser": "zuul -- test/*.js",
+    "test-browser-local": "zuul --local -- test/*.js",
+    "test-node": "tape test/*.js"
+  }
+}

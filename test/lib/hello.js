@@ -1,0 +1,1 @@
+window.log('Hello world')
