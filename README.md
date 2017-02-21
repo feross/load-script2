@@ -33,7 +33,7 @@ load('foo.js', function (err, script) {
 })
 ```
 
-## differences to `load-script`
+## differences to [`load-script`](https://www.npmjs.com/package/load-script)
 
 This package only supports browsers that use the standard DOM API, opting to drop
 non-standard browsers like IE8 and below. It also removes all the options, which
