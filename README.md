@@ -1,4 +1,4 @@
-# load-script2 [![travis][travis-image]][travis-url] [![npm][npm-image]][npm-url] [![downloads][downloads-image]][downloads-url]
+# load-script2 [![travis][travis-image]][travis-url] [![npm][npm-image]][npm-url] [![downloads][downloads-image]][downloads-url] [![javascript style guide][standard-image]][standard-url]
 
 [travis-image]: https://img.shields.io/travis/feross/load-script2/master.svg
 [travis-url]: https://travis-ci.org/feross/load-script2
@@ -6,6 +6,8 @@
 [npm-url]: https://npmjs.org/package/load-script2
 [downloads-image]: https://img.shields.io/npm/dm/load-script2.svg
 [downloads-url]: https://npmjs.org/package/load-script2
+[standard-image]: https://img.shields.io/badge/code_style-standard-brightgreen.svg
+[standard-url]: https://standardjs.com
 
 ### Dynamic script loading for modern browsers
 
