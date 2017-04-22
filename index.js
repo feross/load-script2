@@ -1,11 +1,21 @@
 module.exports = load
 
-function load (src, cb) {
-  var head = document.head || document.getElementsByTagName('head')[0]
+function load (src, opts, cb) {
+  if (typeof opts === 'function') {
+    cb = opts
+    opts = {}
+  }
+
+  var headOrBody
+  if (opts.body) {
+    headOrBody = document.body || document.getElementsByTagName('body')[0]
+  } else {
+    headOrBody = document.head || document.getElementsByTagName('head')[0]
+  }
   var script = document.createElement('script')
 
   script.type = 'text/javascript'
-  script.async = true
+  script.async = opts.async !== false
   script.src = src
 
   if (cb) {
@@ -19,5 +29,5 @@ function load (src, cb) {
     }
   }
 
-  head.appendChild(script)
+  headOrBody.appendChild(script)
 }
