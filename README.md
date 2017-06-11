@@ -46,7 +46,7 @@ The minfied+gzipped size of `load-script2` is 455B, compared to 645B for
 
 ## API
 
-### `load(src, [cb]) {}`
+### `load(src, [cb])`
 
 Append a `<script>` node with the given `src` URL to the `<head>` element in the DOM.
 
