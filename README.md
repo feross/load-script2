@@ -1,5 +1,7 @@
 # load-script2 [![travis][travis-image]][travis-url] [![npm][npm-image]][npm-url] [![downloads][downloads-image]][downloads-url] [![javascript style guide][standard-image]][standard-url]
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/feross/load-script2.svg)](https://greenkeeper.io/)
+
 [travis-image]: https://img.shields.io/travis/feross/load-script2/master.svg
 [travis-url]: https://travis-ci.org/feross/load-script2
 [npm-image]: https://img.shields.io/npm/v/load-script2.svg
