@@ -1,10 +1,9 @@
 module.exports = load
 
 function load (src, cb) {
-  var head = document.head || document.getElementsByTagName('head')[0]
-  var script = document.createElement('script')
+  const head = document.head || document.getElementsByTagName('head')[0]
+  const script = document.createElement('script')
 
-  script.type = 'text/javascript'
   script.async = true
   script.src = src
 
