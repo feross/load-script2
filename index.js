@@ -4,7 +4,7 @@ module.exports = function load (src, attrs, parentNode) {
     script.async = true
     script.src = src
 
-    for (let [k, v] of Object.entries(attrs)) {
+    for (let [k, v] of Object.entries(attrs || {})) {
       script.setAttribute(k, v)
     }
 
