@@ -1,4 +1,4 @@
-module.exports = function load (src, attrs) {
+module.exports = function load (src, attrs, parentNode) {
   return new Promise((resolve, reject) => {
     const script = document.createElement('script')
     script.async = true
@@ -18,7 +18,7 @@ module.exports = function load (src, attrs) {
       reject(new Error(`Failed to load ${src}`))
     }
 
-    const head = document.head || document.getElementsByTagName('head')[0]
-    head.appendChild(script)
+    const node = parentNode || document.head || document.getElementsByTagName('head')[0]
+    node.appendChild(script)
   })
 }
