@@ -22,44 +22,42 @@ npm install load-script2
 ## usage
 
 ```js
-var load = require('load-script2')
+const loadScript = require('load-script2')
 
-load('foo.js', function (err, script) {
-  if (err) {
-    // print useful message
-  }
-  else {
-    console.log(script.src);// Prints 'foo'.js'
-    // use script
-  }
-})
+const script = await loadScript('foo.js')
+console.log(script.src);// Prints 'foo'.js'
 ```
 
 ## differences to [`load-script`](https://www.npmjs.com/package/load-script)
 
-This package only supports browsers that use the standard DOM API, opting to drop
-non-standard browsers like IE8 and below. It also removes all the options, which
-aren't needed most of the time.
+`load-script2` does not support legacy browsers like IE8 because these browsers
+do not have standards-based DOM APIs. `load-script2` also removes many esoteric
+options, which aren't needed most of the time and adds **promises support**.
 
-The minfied+gzipped size of `load-script2` is 455B, compared to 645B for
-`load-script`.
+The sise of `load-script2` is 492 bytes, compared to 655 bytes for `load-script` (minified
+and gzipped).
 
 ## API
 
-### `load(src, [cb])`
+### `promise = loadScript(src, attrs)`
 
 Append a `<script>` node with the given `src` URL to the `<head>` element in the DOM.
 
-#### `url`
+#### `src`
 
 Any url that you would like to load.  May be absolute or relative.
 
-#### `cb`
+#### `attrs`
 
-A callback function of the following interface: `function(err, script) {}` where
-`err` is an error if any occurred and `script` is the `script` node that was
-appended to the DOM.
+An object that contains HTML attributes to set on the `<script>` tag. For
+example, the value `{ id: 'hi' }` would set the attribute `id="hi"` on the
+`<script>` tag before it is injected.
+
+#### `promise`
+
+Returns a promise which resolves to the `script` node that was appended to the
+DOM, or rejects with `err` if any occurred.
 
 ## license
 
-MIT. Copyright (c) [Feross Aboukhadijeh](http://feross.org).
+MIT. Copyright (c) [Feross Aboukhadijeh](https://feross.org).

@@ -5,7 +5,7 @@
   "author": {
     "name": "Feross Aboukhadijeh",
     "email": "feross@feross.org",
-    "url": "http://feross.org/"
+    "url": "https://feross.org"
   },
   "bugs": {
     "url": "https://github.com/feross/load-script2/issues"
@@ -13,6 +13,9 @@
   "dependencies": {},
   "devDependencies": {
     "airtap": "2.0.2",
+    "babel-minify": "^0.5.0",
+    "browserify": "^16.2.3",
+    "load-script": "^1.0.0",
     "standard": "*",
     "tape": "^4.0.0"
   },
@@ -35,6 +38,7 @@
     "url": "git://github.com/feross/load-script2.git"
   },
   "scripts": {
+    "size": "browserify index.js | minify | gzip | wc -c",
     "test": "standard && npm run test-browser",
     "test-browser": "airtap -- test/*.js",
     "test-browser-local": "airtap --local -- test/*.js"
