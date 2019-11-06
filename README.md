@@ -34,7 +34,7 @@ console.log(script.src);// Prints 'foo'.js'
 do not have standards-based DOM APIs. `load-script2` also removes many esoteric
 options, which aren't needed most of the time and adds **promises support**.
 
-The size of `load-script2` is 492 bytes, compared to 655 bytes for `load-script` (minified
+The size of `load-script2` is 357 bytes, compared to 655 bytes for `load-script` (minified
 and gzipped).
 
 ## API
