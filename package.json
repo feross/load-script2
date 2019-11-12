@@ -13,11 +13,10 @@
   "dependencies": {},
   "devDependencies": {
     "airtap": "^2.0.3",
+    "babel-minify": "^0.5.1",
     "browserify": "^16.2.3",
-    "load-script": "^1.0.0",
     "standard": "*",
-    "tape": "^4.0.0",
-    "tinyify": "^2.5.2"
+    "tape": "^4.0.0"
   },
   "homepage": "https://github.com/feross/load-script2",
   "keywords": [
@@ -38,7 +37,7 @@
     "url": "git://github.com/feross/load-script2.git"
   },
   "scripts": {
-    "size": "browserify --plugin tinyify -r . | gzip | wc -c",
+    "size": "browserify -r . | minify | gzip | wc -c",
     "test": "standard && npm run test-browser",
     "test-browser": "airtap -- test/*.js",
     "test-browser-local": "airtap --local -- test/*.js"

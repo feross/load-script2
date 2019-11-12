@@ -1,4 +1,4 @@
-module.exports = function load (src, attrs, parentNode) {
+module.exports = function loadScript2 (src, attrs, parentNode) {
   return new Promise((resolve, reject) => {
     const script = document.createElement('script')
     script.async = true

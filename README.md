@@ -19,6 +19,8 @@ Works in the browser with [browserify](http://browserify.org/)!
 npm install load-script2
 ```
 
+This package works in the browser with [browserify](https://browserify.org). If you do not use a bundler, you can use the [standalone script](https://bundle.run/load-script2) directly in a `<script>` tag.
+
 ## usage
 
 ```js
@@ -34,7 +36,7 @@ console.log(script.src);// Prints 'foo'.js'
 do not have standards-based DOM APIs. `load-script2` also removes many esoteric
 options, which aren't needed most of the time and adds **promises support**.
 
-The size of `load-script2` is 357 bytes, compared to 655 bytes for `load-script` (minified
+The size of `load-script2` is 509 bytes, compared to 655 bytes for `load-script` (minified
 and gzipped).
 
 ## API
