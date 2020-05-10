@@ -1,3 +1,4 @@
+/*! load-script2. MIT License. Feross Aboukhadijeh <https://feross.org/opensource> */
 module.exports = function loadScript2 (src, attrs, parentNode) {
   return new Promise((resolve, reject) => {
     const script = document.createElement('script')
