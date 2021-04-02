@@ -1,5 +1,9 @@
 /*! load-script2. MIT License. Feross Aboukhadijeh <https://feross.org/opensource> */
 module.exports = function loadScript2 (src, attrs, parentNode) {
+  const node = parentNode || document.head || document.getElementsByTagName('head')[0]
+  const existingScript = node.querySelector(`:scope > script[src="${src}"]`)
+  if (existingScript) return existingScript
+
   return new Promise((resolve, reject) => {
     const script = document.createElement('script')
     script.async = true
@@ -19,7 +23,6 @@ module.exports = function loadScript2 (src, attrs, parentNode) {
       reject(new Error(`Failed to load ${src}`))
     }
 
-    const node = parentNode || document.head || document.getElementsByTagName('head')[0]
     node.appendChild(script)
   })
 }
